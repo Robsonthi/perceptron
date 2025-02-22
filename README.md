@@ -56,7 +56,24 @@ When you have a database with patterns, and want to classify others related data
 
 The basic calculation is a dot product. The dot product is a measure of how closely two vectors align, in terms of the directions they point. However, the matrix multiplication of perceptron is related with a sample belongs on a hyperspace and the weights that represent a hyperplane. The hyperplane is a form of separate hyperspace.
 
-The perceptron’s objective is the find the weights that separate the data from hyperspace.
+The perceptron’s objective is the find the weights that separate the data from hyperspace. To update the weights, you use this:
+
+$$W_{new} = 
+\begin{bmatrix}
+w_0 &
+w_1 &
+w_2 &
+\cdots &
+w_n
+\end{bmatrix}_{old}^T +
+\alpha \cdot (target-predict) \cdot
+\begin{bmatrix}
+1 &
+x_1 &
+x_2 &
+\cdots &
+x_n
+\end{bmatrix}^T$$
 
 The threshold is a classification form, if the result is positive, the data is on side of space, if the result is negative, the is on another side of space, separated for hyperplane.
 
